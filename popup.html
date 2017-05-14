@@ -1,0 +1,60 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>My Magic Date Formatter Extension</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="normalize.css" />
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+  </head>
+  <body>
+    <h1>Well, hello.</h1>
+    <div class="dates__container">
+
+      <div class="dates__section">
+        <div class="dates__row">
+          <span class="dates__heading">Right now, it's... </span><span id="dateNow" class="date"><span>
+        </div>
+        <div class="dates__row">
+          <span>UTC: </span><span id="now-utc" class="date"></span>
+        </div>
+        <div class="dates__row">
+          <span>Local: </span><span id="now-local" class="date"></span>
+        </div>
+        <div class="dates__row">
+          <span>ISO: </span><span id="now-iso" class="date"></span>
+        </div>
+      </div>
+
+      <div class="dates__section">
+        <div class="dates__row">
+          <span class="dates__heading">Let's convert...</span><span id="dateNow" class="date"><span>
+        </div>
+        <div class="dates__row">
+          <input id="input" type="text" class="input" />
+        </div>
+        <div class="dates__row">
+          <button id="to-utc" class="button">To UTC</button>
+          <button id="to-local" class="button">To Local</button>
+          <button id="to-iso" class="button">To ISO</button>
+        </div>
+        <div class="dates__row">
+          <span id="converted"></span>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', 'Helvetica', sans-serif;
+  color: hotpink;
+  font-size: 16px;
+  width: 500px;
+  padding: 1rem;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+input {
+  outline: none;
+}
+
+:root {
+  --heading: #27ae60;
+}
+
+.magic {
+  max-width: 500px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.data {
+  font-family: Courier;
+  white-space: pre;
+}
+
+.dates__container {
+  font-size: 1rem;
+  color: slategray;
+}
+
+.dates__section {
+  border: 1px solid slategray;
+  padding: 0 1rem;
+  margin: 1rem 0;
+}
+
+.dates__row {
+  margin: 1rem 0;
+  height: 2rem;
+}
+
+.dates__heading {
+  color: var(--heading);
+}
+
+.input {
+  height: 2rem;
+  width: 15rem;
+  padding-left: 1rem;
+  font-size: 1rem;
+  color: slategray;
+  border: 1px solid slategray;
+}
+
+.button {
+  height: 2rem;
+  border: 1px solid hotpink;
+  background-color: white;
+  color: hotpink;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.33rem 1rem;
+}
+
+.converted {
+  height: 2rem;
+  border: 1px solid slategray;
+}
