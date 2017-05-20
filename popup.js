@@ -2,6 +2,7 @@ const renderNowDates = () => {
   document.getElementById('now-local').textContent = new Date().toString();
   document.getElementById('now-iso').textContent = new Date().toISOString();
   document.getElementById('now-utc').textContent = new Date().toUTCString();
+  document.getElementById('now-milli').textContent = new Date().getTime();
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -21,4 +22,9 @@ document.getElementById('to-local').addEventListener('click', () => {
 document.getElementById('to-iso').addEventListener('click', () => {
   const value = document.getElementById('input').value;
   document.getElementById('converted').textContent = new Date(value).toISOString();
+});
+
+document.getElementById('to-milli').addEventListener('click', () => {
+  const value = document.getElementById('input').value;
+  document.getElementById('converted').textContent = new Date(value).getTime();
 });

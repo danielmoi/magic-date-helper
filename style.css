@@ -20,52 +20,80 @@ input {
 }
 
 :root {
+  --title: hotpink;
   --heading: #27ae60;
+  --label: #3498db;
+  --light-gray: #d7d7d7;
+  --regular-gray: #c3c3c3;
+  --dark-gray: #444;
+
 }
 
-.magic {
-  max-width: 500px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
+.mdh__title {
+  color: var(--title);
+  text-transform: uppercase;
 }
-
-.data {
-  font-family: Courier;
-  white-space: pre;
-}
-
-.dates__container {
+.mdh__container {
   font-size: 1rem;
-  color: slategray;
+  color: var(--regular-gray);
 }
 
-.dates__section {
-  border: 1px solid slategray;
-  padding: 0 1rem;
+.mdh-panel {
+  position: relative;
+  border: 1px solid var(--regular-gray);
   margin: 1rem 0;
 }
-
-.dates__row {
-  margin: 1rem 0;
+.mdh-panel__heading {
+  display: flex;
+  align-items: center;
   height: 2rem;
+  background: white;
+  padding: 0.5rem 1rem;
+  color: var(--dark-gray);
+  background-color: var(--light-gray);
+  border-bottom: 1px solid var(--regular-gray);
 }
 
-.dates__heading {
+.mdh-row__container {
+  margin: 1rem 0;
+  padding: 0 1rem;
+  min-height: 2rem;
+}
+
+.mdh-row__heading {
   color: var(--heading);
 }
 
-.input {
-  height: 2rem;
-  width: 15rem;
-  padding-left: 1rem;
-  font-size: 1rem;
-  color: slategray;
-  border: 1px solid slategray;
+.mdh-cell--heading {
+  color: var(--heading);
+}
+.mdh-cell--label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--label);
+  margin-bottom: 0.25rem;
+}
+.mdh-cell--value {
+  height: 1rem;
 }
 
-.button {
+.mdh-cell--buttons {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.mdh-input {
+  height: 2rem;
+  min-width: 15rem;
+  width: 100%;
+  padding-left: 1rem;
+  font-size: 1rem;
+  color: var(--regular-gray);
+  border: 1px solid var(--regular-gray);
+}
+
+.mdh-button {
   height: 2rem;
   border: 1px solid hotpink;
   background-color: white;
@@ -75,9 +103,6 @@ input {
   align-items: center;
   justify-content: center;
   padding: 0.33rem 1rem;
+  margin-right: 0.5rem;
 }
 
-.converted {
-  height: 2rem;
-  border: 1px solid slategray;
-}
