@@ -26,7 +26,7 @@ input {
   --light-gray: #d7d7d7;
   --regular-gray: #c3c3c3;
   --dark-gray: #444;
-
+  --button-active: hotpink;
 }
 
 .mdh__title {
@@ -95,9 +95,9 @@ input {
 
 .mdh-button {
   height: 2rem;
-  border: 1px solid hotpink;
+  border: 1px solid var(--light-gray);
   background-color: white;
-  color: hotpink;
+  color: var(--light-gray);
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -106,3 +106,7 @@ input {
   margin-right: 0.5rem;
 }
 
+.mdh-button--active {
+  border: 1px solid var(--button-active);
+  color: var(--button-active);
+}

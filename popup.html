@@ -6,15 +6,10 @@
  -->
 <html>
   <head>
-    <title>My Magic Date Formatter Extension</title>
+    <title>Magic Date Helper Chrome Extension</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="normalize.css" />
-    <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
-     -->
+
   </head>
   <body>
     <div class="mdh__title">Magic Date Helper</div>
@@ -27,22 +22,22 @@
         </div>
         <div class="mdh-row__container">
           <div class="mdh-cell mdh-cell--label">UTC</div>
-          <div id="now-utc" class="mdh-cell mdh-cell--value"></div>
+          <div id="mdh-now-utc" class="mdh-cell mdh-cell--value"></div>
         </div>
 
         <div class="mdh-row__container">
           <div class="mdh-cell mdh-cell--label">Local</div>
-          <div id="now-local" class="mdh-cell mdh-cell--value"></div>
+          <div id="mdh-now-local" class="mdh-cell mdh-cell--value"></div>
         </div>
 
         <div class="mdh-row__container">
           <div class="mdh-cell mdh-cell--label">ISO</div>
-          <div id="now-iso" class="mdh-cell mdh-cell--value"></div>
+          <div id="mdh-now-iso" class="mdh-cell mdh-cell--value"></div>
         </div>
 
         <div class="mdh-row__container">
           <div class="mdh-cell mdh-cell--label">Timestamp (ms)</div>
-          <div id="now-milli" class="mdh-cell mdh-cell--value"></div>
+          <div id="mdh-now-milli" class="mdh-cell mdh-cell--value"></div>
         </div>
 
       </div>
@@ -50,20 +45,20 @@
       <div class="mdh-panel">
         <div class="mdh-panel__heading">Let's convert...</div>
         <div class="mdh-row__container">
-          <input id="input" type="text" class="mdh-input" autofocus/>
+          <input id="mdh-input" type="text" class="mdh-input" autofocus/>
         </div>
         <div class="mdh-row__container">
           <div class="mdh-cell mdh-cell--label">Choose a format</div>
           <div class="mdh-cell mdh-cell--buttons">
-            <button id="to-utc" class="mdh-button">UTC</button>
-            <button id="to-local" class="mdh-button">Local</button>
-            <button id="to-iso" class="mdh-button">ISO</button>
-            <button id="to-milli" class="mdh-button">Timestamp</button>
+            <button id="mdh-to-utc" class="mdh-button">UTC</button>
+            <button id="mdh-to-local" class="mdh-button">Local</button>
+            <button id="mdh-to-iso" class="mdh-button">ISO</button>
+            <button id="mdh-to-milli" class="mdh-button">Timestamp</button>
           </div>
         </div>
         <div class="mdh-row__container">
           <div class="mdh-cell mdh-cell--label">Result</div>
-          <div id="converted" class="mdh-cell--value"></div>
+          <div id="mdh-converted" class="mdh-cell--value"></div>
         </div>
       </div>
 
