@@ -51,3 +51,9 @@ for (const button of buttons) {
     document.getElementById('mdh-converted').textContent = display;
   });
 }
+
+/* --- Form Handler ------------------------ */
+const form = document.getElementById('mdh-form');
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+});

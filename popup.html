@@ -43,23 +43,32 @@
       </div>
 
       <div class="mdh-panel">
-        <div class="mdh-panel__heading">Let's convert...</div>
-        <div class="mdh-row__container">
-          <input id="mdh-input" type="text" class="mdh-input" autofocus/>
-        </div>
-        <div class="mdh-row__container">
-          <div class="mdh-cell mdh-cell--label">Choose a format</div>
-          <div class="mdh-cell mdh-cell--buttons">
-            <button id="mdh-to-utc" class="mdh-button">UTC</button>
-            <button id="mdh-to-local" class="mdh-button">Local</button>
-            <button id="mdh-to-iso" class="mdh-button">ISO</button>
-            <button id="mdh-to-milli" class="mdh-button">Timestamp</button>
+
+        <form id="mdh-form" class="mdh-form">
+
+          <div class="mdh-panel__heading">Let's convert...</div>
+
+          <div class="mdh-row__container">
+            <input id="mdh-input" type="text" class="mdh-input" autofocus />
           </div>
-        </div>
-        <div class="mdh-row__container">
-          <div class="mdh-cell mdh-cell--label">Result</div>
-          <div id="mdh-converted" class="mdh-cell--value"></div>
-        </div>
+
+          <div class="mdh-row__container">
+            <div class="mdh-cell mdh-cell--label">Choose a format</div>
+            <div class="mdh-cell mdh-cell--buttons">
+              <button id="mdh-to-utc" class="mdh-button" type="button">UTC</button>
+              <button id="mdh-to-local" class="mdh-button" type="submit">Local</button>
+              <button id="mdh-to-iso" class="mdh-button" type="button">ISO</button>
+              <button id="mdh-to-milli" class="mdh-button" type="button">Timestamp</button>
+            </div>
+          </div>
+
+          <div class="mdh-row__container">
+            <div class="mdh-cell mdh-cell--label">Result</div>
+            <div id="mdh-converted" class="mdh-cell--value"></div>
+          </div>
+
+        </form>
+
       </div>
 
     </div>
