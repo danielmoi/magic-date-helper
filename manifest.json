@@ -4,7 +4,7 @@
   "name": "Magic Date Helper",
   "short_name": "Magic Date Helper",
   "description": "A magic extension helper for displaying and converting dates",
-  "version": "1.0.1",
+  "version": "1.0.2",
 
   "browser_action": {
     "default_icon": "icon.png",
