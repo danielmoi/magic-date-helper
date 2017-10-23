@@ -53,6 +53,24 @@
           </div>
 
           <div class="mdh-row__container">
+            <div class="mdh-cell mdh-cell--label">Adjust</div>
+            <select name="" id="">
+              <option value="add">Add</option>
+              <option value="subtract">Subtract</option>
+            </select>
+            <input
+              id="mdh-delta"
+              type="text"
+              class="mdh-input mdh-input--adjust"
+              value="0"
+            />
+            <select name="" id="">
+              <option value="hours">Hours</option>
+              <option value="days">Days</option>
+            </select>
+          </div>
+
+          <div class="mdh-row__container">
             <div class="mdh-cell mdh-cell--label">Choose a format</div>
             <div class="mdh-cell mdh-cell--buttons">
               <button id="mdh-to-utc" class="mdh-button" type="button">UTC</button>
@@ -61,6 +79,8 @@
               <button id="mdh-to-milli" class="mdh-button" type="button">Timestamp</button>
             </div>
           </div>
+
+
 
           <div class="mdh-row__container">
             <div class="mdh-cell mdh-cell--label">Result</div>

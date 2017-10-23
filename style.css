@@ -94,6 +94,11 @@ input {
   border: 1px solid var(--regular-gray);
 }
 
+.mdh-input--adjust {
+  width: 5rem;
+  min-width: initial;
+}
+
 .mdh-button {
   height: 2rem;
   border: 1px solid var(--light-gray);
