@@ -15,7 +15,8 @@ button {
   outline: none;
 }
 
-input {
+input,
+select {
   outline: none;
 }
 
@@ -86,6 +87,7 @@ input {
   flex-wrap: wrap;
 }
 
+/* SELECT */
 .mdh-select {
   cursor: pointer;
   appearance: none;
@@ -98,7 +100,11 @@ input {
   font-weight: 400;
   color: var(--select-text);
 }
+.mdh-select:focus {
+  border: 1px solid var(--button-active);
+}
 
+/* INPUT */
 .mdh-input {
   height: 2rem;
   min-width: 15rem;
@@ -109,11 +115,16 @@ input {
   border: 1px solid var(--regular-gray);
 }
 
+.mdh-input:focus {
+  border: 1px solid var(--button-active);
+}
+
 .mdh-input--adjust {
   width: 5rem;
   min-width: initial;
 }
 
+/* BUTTON */
 .mdh-button {
   height: 2rem;
   border: 1px solid var(--light-gray);
