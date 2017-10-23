@@ -25,54 +25,56 @@ const addActiveClass = (el) => {
 };
 
 const getDisplay = (id, value) => {
+  let raw = value;
+
+  // we receive null from input if empty
+  if (value === null) raw = new Date();
+
   switch (id) {
-    case 'mdh-to-utc': return new Date(value).toUTCString();
-    case 'mdh-to-local': return new Date(value);
-    case 'mdh-to-iso': return new Date(value).toISOString();
-    case 'mdh-to-milli': return new Date(value).getTime();
+    case 'mdh-to-utc': return new Date(raw).toUTCString();
+    case 'mdh-to-local': return new Date(raw);
+    case 'mdh-to-iso': return new Date(raw).toISOString();
+    case 'mdh-to-milli': return new Date(raw).getTime();
     default: return '';
   }
 };
 
-// add click listeners
-const buttons = document.getElementsByClassName('mdh-button');
-
-const addHours = (date, hours) => {
-  const msDelta = hours * 60 * 60 * 1000;
-  const initial = new Date(date).getTime();
-  const result = initial + msDelta;
-  console.log('🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶');
-  console.log('result:', result);
+// beautiful moment library
+const adjust = (original, operator, value, unit) => {
+  const result = moment(original)[operator](value, unit).toISOString();
   return result;
 };
 
-console.log('moment().format():', moment().format());
+const buttons = document.getElementsByClassName('mdh-button');
 
+// add click listeners
 for (const button of buttons) {
   button.addEventListener('click', function magic() {
+    // make the button clicked "active"
     removeActiveClasses();
     addActiveClass(this);
+
+    // get input value
+    const id = this.id;
     let value = document.getElementById('mdh-input').value;
-    console.log('🍆🍆🍆🍆🍆🍆🍆🍆🍆🍆🍆🍆🍆🍆🍆🍆🍆🍆');
-    console.log('value:', value);
+
+    // convert millisecond timestamp string to type Number
     const numbersOnly = /^[0-9]*$/;
     if (value.match(numbersOnly)) {
       value = Number(value);
     }
-    const id = this.id;
 
+    // adjust input value
     const deltaOperator = document.getElementById('mdh-delta-operator').value;
-    console.log('🍩🍩🍩🍩🍩🍩🍩🍩🍩🍩🍩🍩🍩🍩🍩🍩🍩🍩🍩');
-    console.log('deltaOperator:', deltaOperator);
-    const answer = addHours(value, 1);
-    console.log('🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶');
-    console.log('answer:', answer);
+    const deltaValue = document.getElementById('mdh-delta-value').value;
+    const deltaUnits = document.getElementById('mdh-delta-units').value;
 
-    const answer2 = addHours(value, 0);
-    console.log('🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶');
-    console.log('answer2:', answer2);
+    const adjusted = adjust(value, deltaOperator, deltaValue, deltaUnits);
 
-    const display = getDisplay(id, value);
+    // generate display
+    const display = getDisplay(id, adjusted);
+
+    // render display
     document.getElementById('mdh-converted').textContent = display;
   });
 }

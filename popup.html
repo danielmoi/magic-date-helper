@@ -54,17 +54,17 @@
 
           <div class="mdh-row__container">
             <div class="mdh-cell mdh-cell--label">Adjust</div>
-            <select name="" id="">
+            <select name="mdh-delta-operator" id="mdh-delta-operator">
               <option value="add">Add</option>
               <option value="subtract">Subtract</option>
             </select>
             <input
-              id="mdh-delta"
+              id="mdh-delta-value"
               type="text"
               class="mdh-input mdh-input--adjust"
               value="0"
             />
-            <select name="" id="">
+            <select name="mdh-delta-units" id="mdh-delta-units" class="">
               <option value="hours">Hours</option>
               <option value="days">Days</option>
             </select>
@@ -93,6 +93,7 @@
 
     </div>
 
+    <script src="moment.min.js"></script>
     <script src="popup.js"></script>
   </body>
 </html>

@@ -28,6 +28,8 @@ input {
   --dark-gray: #444;
   --button-active: hotpink;
   --color-hover: #ffb6c1;
+  --element-outline: #95a5a6;
+  --select-text: #444;
 }
 
 .mdh__title {
@@ -82,6 +84,20 @@ input {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+}
+
+.mdh-select {
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: white;
+  height: 2.5rem;
+  width: 100%;
+  padding: 0 3rem 0 1rem;
+  border-radius: 0;
+  border: 1px solid var(--element-outline);
+  font-weight: 400;
+  color: var(--select-text);
 }
 
 .mdh-input {
