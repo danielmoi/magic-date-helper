@@ -1,5 +1,8 @@
 # Magic Date Helper
 
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/nlpdhfdecdmpaafflanbcfdadlofmnpi.svg)]()
+[![Mozilla Add-on](https://img.shields.io/amo/v/magic-date-helper.svg)]()
+
 A magic helper for displaying, converting, and manipulating dates
 
 Supported formats:
