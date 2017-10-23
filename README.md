@@ -24,6 +24,8 @@ Mon Oct 23 2017 22:42:02 GMT+1100 (AEDT)
 
 Available at the Chrome Web Store [here](https://chrome.google.com/webstore/detail/magic-date-helper/nlpdhfdecdmpaafflanbcfdadlofmnpi)
 
+Now also available at Firefox Add-Ons [here](https://addons.mozilla.org/en-US/firefox/addon/magic-date-helper/)
+
 
 ----
 ### Credits
