@@ -92,6 +92,7 @@ select {
   cursor: pointer;
   appearance: none;
   -webkit-appearance: none;
+  -moz-appearance: none;
   background-color: white;
   height: 2rem;
   padding: 0 3rem 0 1rem;
@@ -99,6 +100,10 @@ select {
   border: 1px solid var(--element-outline);
   font-weight: 400;
   color: var(--select-text);
+}
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 var(--select-text);
 }
 .mdh-select:focus {
   border: 1px solid var(--button-active);
