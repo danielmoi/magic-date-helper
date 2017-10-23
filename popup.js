@@ -25,16 +25,11 @@ const addActiveClass = (el) => {
 };
 
 const getDisplay = (id, value) => {
-  let raw = value;
-
-  // we receive null from input if empty
-  if (value === null) raw = new Date();
-
   switch (id) {
-    case 'mdh-to-utc': return new Date(raw).toUTCString();
-    case 'mdh-to-local': return new Date(raw);
-    case 'mdh-to-iso': return new Date(raw).toISOString();
-    case 'mdh-to-milli': return new Date(raw).getTime();
+    case 'mdh-to-utc': return new Date(value).toUTCString();
+    case 'mdh-to-local': return new Date(value);
+    case 'mdh-to-iso': return new Date(value).toISOString();
+    case 'mdh-to-milli': return new Date(value).getTime();
     default: return '';
   }
 };
