@@ -37,16 +37,41 @@ const getDisplay = (id, value) => {
 // add click listeners
 const buttons = document.getElementsByClassName('mdh-button');
 
+const addHours = (date, hours) => {
+  const msDelta = hours * 60 * 60 * 1000;
+  const initial = new Date(date).getTime();
+  const result = initial + msDelta;
+  console.log('🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶');
+  console.log('result:', result);
+  return result;
+};
+
+console.log('moment().format():', moment().format());
+
 for (const button of buttons) {
   button.addEventListener('click', function magic() {
     removeActiveClasses();
     addActiveClass(this);
     let value = document.getElementById('mdh-input').value;
+    console.log('🍆🍆🍆🍆🍆🍆🍆🍆🍆🍆🍆🍆🍆🍆🍆🍆🍆🍆');
+    console.log('value:', value);
     const numbersOnly = /^[0-9]*$/;
     if (value.match(numbersOnly)) {
       value = Number(value);
     }
     const id = this.id;
+
+    const deltaOperator = document.getElementById('mdh-delta-operator').value;
+    console.log('🍩🍩🍩🍩🍩🍩🍩🍩🍩🍩🍩🍩🍩🍩🍩🍩🍩🍩🍩');
+    console.log('deltaOperator:', deltaOperator);
+    const answer = addHours(value, 1);
+    console.log('🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶');
+    console.log('answer:', answer);
+
+    const answer2 = addHours(value, 0);
+    console.log('🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶🌶');
+    console.log('answer2:', answer2);
+
     const display = getDisplay(id, value);
     document.getElementById('mdh-converted').textContent = display;
   });
